@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+.btn {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: blue;
+  background-color: white;
+  margin-top: 5px;
+  padding: 5px 15px;
+  border: 2px solid blue;
+  transition: 0.6s ease-in;
+}
+.btn:hover {
+  background-color: blue;
+  color: white;
+  border: 2px solid white;
+}
+.navbar{
+  height: 70px;
+  width: 100%;
+  padding: 12px 0px 5px 10px;
+  background-color: #070331;
+  position: relative;
+  border-bottom: 4px solid blue;
+}
+.navbar .nav-header{
+  display: inline;
+}
+.navbar .nav-header .nav-logo{
+  display: inline-block;
+  margin-top: 5px;
+}
+.navbar .nav-links{
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+ 
+.navbar .nav-links .loginBtn{
+  display: inline-block;
+  padding: 5px 15px;
+  margin-left: 20px;
+  font-size: 17px;
+  color: blue;
+  background-color: white;
+  border: 2px solid blue;
+}
+.navbar .nav-links a{
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: 550;
+  color: white;
+}
+.navbar .nav-links .nav-btn a:hover {
+  background-color: blue;
+  color: white;
+}
+/* Hover effects */
+.navbar .nav-links a:hover {
+  background-color: blue;
+}
+ 
+/* responsive navbar toggle button */
+.navbar #nav-check, .navbar .nav-btn{
+  display: none;
+}
+ 
+@media (max-width:700px) {
+   .navbar .nav-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .navbar .nav-btn label {
+    display: inline-block;
+    width: 40px;
+    height: 42px;
+    margin-top: 15px;
+    margin-right: 10px;
+    border: 4px solid blue;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-top: 5px;
+  }
+  .navbar .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 20px;
+    border-top: 4px solid white;
+  }
+  .navbar .nav-links{
+    position: absolute;
+    display: block;
+    text-align: center;
+    background-color: rgb(9, 14, 90);
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 66px;
+    right: 0px;
+    border-left: 4px solid blue;
+    border-bottom: 4px solid blue;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+ 
+  /* when nav toggle button not checked */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+ 
+  /* when nav toggle button is checked */
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(50vh - 70px);
+    overflow-y: auto;
+  }
+  .navbar .nav-links .loginBtn {
+    padding: 10px 40px ;
+    margin: 20px;
+    font-size:  18px;
+    font-weight: bold;
+    color: rgb(9, 14, 90);
+  }
+   
+ 
+}
+
+
